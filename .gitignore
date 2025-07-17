@@ -1,0 +1,22 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+checkpoints
+
+# Data / model outputs
+data/
+TM1_data.json
+manim_instruction.json
+adapter-checkpoint/
+tmp-adapter/
+*.ckpt
+
+# Logs
+*.log
