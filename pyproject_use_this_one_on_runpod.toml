@@ -14,4 +14,7 @@ dependencies = [
     "peft>=0.15.2",
     "pydantic>=2.11.4",
     "trl>=0.12.2",
+    "python-dotenv>=1.0.1",
+    "pyyaml>=6.0.1",
+    "pytest>=8.2.2",
 ]

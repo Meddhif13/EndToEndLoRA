@@ -1,4 +1,12 @@
-def prompt_template(data: str, num_records: int = 5):
+"""Prompt templates for synthetic data generation."""
+
+from __future__ import annotations
+
+from typing import Any
+
+
+def prompt_template(data: str, num_records: int = 5) -> str:
+    """Return a prompt asking the LLM to create question/answer pairs."""
 
     return f"""You are an expert data curator assisting a machine learning engineer in creating a high-quality instruction tuning dataset. Your task is to transform 
     the provided data chunk into diverse question and answer (Q&A) pairs that will be used to fine-tune a language model. 
@@ -41,5 +49,10 @@ def prompt_template(data: str, num_records: int = 5):
     """
 
 
-if __name__ == "__main__":
+def main() -> None:
+    """Demonstrate prompt creation."""
     print(prompt_template("nicholas renotte", 10))
+
+
+if __name__ == "__main__":
+    main()

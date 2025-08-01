@@ -8,4 +8,7 @@ dependencies = [
     "colorama>=0.4.6",
     "docling>=2.31.0",
     "litellm>=1.69.0",
+    "python-dotenv>=1.0.1",
+    "pyyaml>=6.0.1",
+    "pytest>=8.2.2",
 ]
