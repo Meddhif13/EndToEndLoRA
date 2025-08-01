@@ -1,4 +1,11 @@
-def prompt_template(data: str, num_records: int = 5):
+"""Prompt templates for synthetic data generation."""
+
+from __future__ import annotations
+from typing import Any
+
+
+def prompt_template(data: str, num_records: int = 5) -> str:
+    """Return a prompt asking the LLM to create question/answer pairs."""
 
     return f"""You are an expert data curator assisting a machine learning engineer in creating a high-quality instruction tuning dataset. Your task is to transform 
     the provided data chunk into diverse question and answer (Q&A) pairs that will be used to fine-tune a language model. 
@@ -16,30 +23,22 @@ def prompt_template(data: str, num_records: int = 5):
     content, ensuring answers are accurate and neutral.
 
     Example:
-    
+        
         "question": "What is the primary purpose of this dataset?",
         "answer": "This dataset serves as training data for fine-tuning a language model."
-    
+        
 
-    By following these guidelines, you'll contribute to a robust and effective dataset that enhances the model's performance."
-
-    ---
-
-    **Explanation:**
-
-    - **Clarity and Specificity:** The revised prompt clearly defines the role of the assistant and the importance of the task, ensuring alignment with the 
-    project goals.
-    - **Quality Standards:** It emphasizes the need for well-formulated Q&A pairs, specifying the structure and content of each question and answer.
-    - **Output Format:** An example JSON structure is provided to guide the format accurately.
-    - **Constraints and Biases:** A note on avoiding sensitive or biased content ensures ethical considerations are met.
-    - **Step-by-Step Guidance:** The prompt breaks down the task into manageable steps, making it easier for the assistant to follow.
-
-    This approach ensures that the generated data is both high-quality and meets the specific requirements of the machine learning project.
-    
+    By following these guidelines, you'll contribute to a robust and effective dataset that enhances the model's performance.
+        
     Data
     {data}
     """
 
 
-if __name__ == "__main__":
+def main() -> None:
+    """Demonstrate prompt creation."""
     print(prompt_template("nicholas renotte", 10))
+
+
+if __name__ == "__main__":
+    main()

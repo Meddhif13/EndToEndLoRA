@@ -20,3 +20,5 @@ tmp-adapter/
 
 # Logs
 *.log
+uv.env
+/.env
